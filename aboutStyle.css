@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: #1f242d;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 10%;
+}
+
+.logo{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 27px;
+    cursor: default;
+    animation: sideLeft 1s ease forwards;
+    opacity: 0;
+
+}
+
+.navbar a{
+    display: inline-block;
+text-decoration: none;
+color: #fff;
+padding: 0px 16px;
+font-weight: 600;
+transition: 0.3s all;
+animation: navMenu 1s ease forwards;
+animation-delay:  calc(0.2s * var(--i));;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: #0ef;
+}
+
+.about-wrapper{
+    padding: 25px 10%;
+}
+
+.about-wrapper h1{
+    font-size: 55px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    animation: slideRightH1 1.2s ease forwards;
+    opacity: 0;
+    animation-delay: 0.3s;
+    color: #0ef;
+    text-align: center;
+}
+
+.first{
+    font-size: 29px;
+    font-weight: 700;
+    margin: 10px 0;
+    letter-spacing: 1px;
+    animation: firstParagraphSlideDown 1s ease forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.second{
+    font-size: 29px;
+    font-weight: 700;
+    margin: 10px 0;
+    letter-spacing: 1px;
+    animation: secondParagraphSlideUp 1s ease forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+
+
+
+
+/* ======== Animation */
+
+@keyframes sideLeft{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes navMenu{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRightH1{
+    0%{
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* firstParagraphSlideUp */
+
+@keyframes firstParagraphSlideDown{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes secondParagraphSlideUp{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+

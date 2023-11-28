@@ -1,0 +1,60 @@
+.wrapper h1{
+    font-size: 55px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    animation: slideRight 1.2s ease forwards;
+    opacity: 0;
+    animation-delay: 0.3s;
+    color: #0ef;
+}
+
+.contactList {
+    padding-left: 250px;
+    
+}
+
+
+li{
+    animation: Popup-Contact 1s ease forwards;
+    animation-delay: calc(0.3s * var(--i));
+    opacity: 0;
+    color: #0ef;
+    font-size: 29px;
+    font-weight: 700;
+    margin: 10px 50px;
+    padding-left: 3px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+
+
+
+
+
+/* Animation */
+
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(450px);
+        opacity: 1;
+    }
+}
+
+/* Popup-Contact */
+
+@keyframes Popup-Contact{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
