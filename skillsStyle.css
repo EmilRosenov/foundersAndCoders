@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* width: 100vw; */
+    
+}
+
+body{
+    background-color: #1f242d;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 10%;
+}
+
+.logo{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 27px;
+    cursor: default;
+    animation: sideLeft 1s ease forwards;
+    opacity: 0;
+
+}
+
+.navbar a{
+    display: inline-block;
+text-decoration: none;
+color: #fff;
+padding: 0px 16px;
+font-weight: 600;
+transition: 0.3s all;
+animation: navMenu 1s ease forwards;
+animation-delay:  calc(0.2s * var(--i));;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: #0ef;
+}
+
+.wrapper{
+   
+    padding: 25px 10%;
+}
+
+.professional_background,
+.skills_and_strengths,
+.passion_and_interests,
+.career_goals,
+.values_and_ethic{
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+h1{
+    font-size: 55px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    animation: slideRight 1.2s ease forwards;
+    opacity: 0;
+    animation-delay: 0.3s;
+}
+
+h2{
+    font-size: 35px;
+    font-weight: 600;
+    color: #0ef;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+p{
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 25px;
+    margin: 20px 0px 40px 0px;
+    animation: Popup 1s ease forwards;
+    animation-delay: calc(0.3s * var(--i));
+    opacity: 0;
+    color:white;
+}
+
+/* .skillsList {
+    padding-left: 75px;
+} */
+
+span{
+    font-size: 18px;
+    color: white;
+}
+
+/* .skills_paragraph{
+    font-size: 18px;
+    color: white;
+} */
+
+#prof_backgroundBtn, 
+#skillsBtn, 
+#passionBtn, 
+#goalsBtn,
+#valuesBtn,
+#qualitiesBtn,
+#personalBtn{
+    background-color: #0ef;
+    padding: 20px 50px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 0 15px #0ef;
+    position: relative;
+    right: 5%;
+    /* left: 400px; */
+    align-self: flex-end;
+   
+}
+
+#prof_backgroundBtn:hover, 
+#skillsBtn:hover, 
+#passionBtn:hover, 
+#goalsBtn:hover,
+#valuesBtn:hover,
+#qualitiesBtn:hover,
+#personalBtn:hover{
+    box-shadow: none;
+}
+
+
+
+
+#firstMore,
+#secondMore,
+#thirdMore,
+#fourthMore,
+#fifthMore,
+#sixthMore,
+#seventhMore{
+    display: none;
+}
+
+
+
+/* =============Animations============ */
+@keyframes sideLeft{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes navMenu{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* h1 */
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+/* Popup li */
+
+@keyframes Popup{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/*======================================Responsive=============== */
+@media screen and (max-width:750px){
+    .hero-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn{
+        display: none;
+    }
+
+} 
+
+@media screen and (max-width:597px){
+   .navbar {
+    font-size: 20px;
+   }
+   .logo{
+    display: none;
+}
+    .wrapper h1{
+        font-size: 35px;
+    }
+} 
+
+
+@media screen and (min-width:598px) and (max-width:667px) {
+    .logo{
+        display: none;
+    }
+    .navbar {
+     font-size: 20px;
+    }
+   .wrapper h1{
+    text-align: left;
+    font-size: 35px;
+  
+   }
+ } 
+
+
+ @media screen and (max-width:474px){
+    .navbar {
+        font-size: 14px;
+       }
+       .wrapper h1{
+        text-align: left;
+        font-size: 25px;
+      
+       }
+} 
+
